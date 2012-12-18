@@ -12,14 +12,13 @@ Problems it solves:
 * ownership. you own it all and control it. never need to get all your data "out" of a system -- those systems just contain copies
 * easy to keep up with whatever social service comes around
 
+![](https://api.travis-ci.org/jmccartie/focal.png)
+
 ## Ok. So What am I supposed to do with this?
 
-1. Fork it. Tweak it. Deploy it somewhere.
-2. Contribute back to the community.
+Well, it's not done yet.  When it is, you'll be able to fork it, tweak it, and deploy it somewhere.
 
-# Tests
-
-![](https://api.travis-ci.org/jmccartie/focal.png)
+In the meantime, contribute!!
 
 # Contributing
 
