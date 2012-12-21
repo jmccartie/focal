@@ -25,7 +25,10 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="#") Focal
+          = link_to "Focal", root_path, class: "brand"
+          - if current_user
+            .navbar-text.pull-right
+              = link_to "Log out", logout_path, method: :delete
           .container.nav-collapse
             %ul.nav
               - all_pages.each do |page|

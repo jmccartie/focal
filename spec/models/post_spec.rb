@@ -20,4 +20,12 @@ describe Post do
     end
   end # validations
 
+  describe ".to_param" do
+    it "returns a friendly URL" do
+      @post.save!
+      @post.title = "Awesome Title"
+      @post.to_param.should == "#{@post.id}-awesome-title"
+    end
+  end
+
 end

@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :require_login, except: [:index, :show]
+
   # GET /posts
   # GET /posts.json
   def index
@@ -76,7 +78,7 @@ class PostsController < ApplicationController
     @post.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url }
+      format.html { redirect_to root_url }
       format.json { head :no_content }
     end
   end

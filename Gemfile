@@ -34,10 +34,14 @@ group :development do
   gem 'rb-fsevent', '~> 0.9.1'
 end
 
+group :development, :test do
+  gem 'capybara', '~> 1.1.3'
+  gem 'capybara-webkit', '~> 0.12.1'
+end
+
 group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-  gem 'capybara'
   gem 'guard'
   gem 'guard-spork'
   gem 'guard-rails'

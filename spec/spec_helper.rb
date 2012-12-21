@@ -7,6 +7,8 @@ require 'spork'
 
 
 Spork.prefork do
+  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+  Capybara.javascript_driver = :webkit
 
  RSpec.configure do |config|
     config.mock_with :rspec
@@ -28,6 +30,8 @@ Spork.prefork do
       DatabaseCleaner.strategy = :transaction if example.metadata[:js]
     end
 
+    config.include(UserMacros)
+    config.include(JsMacros)
     config.include FactoryGirl::Syntax::Methods
     config.order = 'random'
   end
@@ -37,3 +41,4 @@ end
 Spork.each_run do
   FactoryGirl.reload
 end
+
