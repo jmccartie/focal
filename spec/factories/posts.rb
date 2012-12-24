@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :post do
-    title "MyString"
-    body "MyText"
+    title Faker::Company.catch_phrase
+    body Faker::Lorem.paragraphs.join("\n\n")
   end
 end

@@ -25,4 +25,13 @@ describe Page do
     end
   end # validations
 
+  describe "before_validation" do
+    it "creates a slug" do
+      @page.title = "My AWesome titLe"
+      @page.slug = nil
+      @page.valid?
+      @page.slug.should == "my-awesome-title"
+    end
+  end
+
 end

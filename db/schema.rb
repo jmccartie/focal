@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20121218220732) do
 
   create_table "pages", :force => true do |t|
     t.string   "title"
+    t.string   "slug"
     t.text     "body"
     t.integer  "sort_order", :default => 1
     t.datetime "created_at",                :null => false

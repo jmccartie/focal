@@ -9,8 +9,8 @@ Focal::Application.routes.draw do
   resources :posts
 
   # Pages
-  resources :pages, except: [:show]
-  get ":id" => "pages#show", constraints: {id: /(?>[\d\w\/-]+)(?!\.)/}
+  resources :pages, constraints: {id: /([a-z0-9]+)(\-[a-z0-9]+)*([a-z0-9]+)?/}
+  get ":id" => "pages#show", constraints: {id: /([a-z0-9]+)(\-[a-z0-9]+)*([a-z0-9]+)?/}
 
   root :to => 'pages#index'
 end

@@ -35,18 +35,18 @@ group :development do
 end
 
 group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'faker'
   gem 'capybara', '~> 1.1.3'
   gem 'capybara-webkit', '~> 0.12.1'
 end
 
 group :test do
-  gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'guard'
   gem 'guard-spork'
   gem 'guard-rails'
   gem 'guard-rspec'
-  gem 'faker'
   gem 'growl'
   gem 'spork-rails'
   gem 'rspec-rails'
