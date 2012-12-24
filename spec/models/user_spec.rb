@@ -1,5 +1,13 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+    @user = build(:user)
+  end
+
+  describe "validations" do
+    it "is valid" do
+      @user.should be_valid
+    end
+  end
 end
