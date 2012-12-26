@@ -1,5 +1,8 @@
 Focal::Application.routes.draw do
 
+  # Statuses
+  resources :statuses
+
   # Sessions
   delete "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"

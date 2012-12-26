@@ -1,0 +1,10 @@
+%p#notice= notice
+
+%p
+  %b Body:
+  = @status.body
+
+- if current_user
+  = link_to 'Edit', edit_status_path(@status)
+  \|
+  = link_to "Delete", status_path(@status), method: :delete, confirm: "Are you sure?"
